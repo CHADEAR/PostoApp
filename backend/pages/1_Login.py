@@ -36,7 +36,7 @@ def change_colors():
             .st-emotion-cache-h4xjwg{
                 background-color: #ff5f5f;  /* สีพื้นหลัง */
             }
-            st-emotion-cache-1dp5vir{
+            .st-emotion-cache-1dp5vir{
                 background-color: #ff5f5f;  /* สีพื้นหลัง */
             }
             .stText {
