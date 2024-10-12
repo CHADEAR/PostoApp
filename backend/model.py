@@ -50,12 +50,14 @@ def crop_and_read_names(image_path, bounding_boxes):
     return cropped_names
 
 def save_to_csv(cropped_names):
-    csv_file_path = 'backend/names.csv'
+    csv_file_path = 'backend/names.csv'  # ระบุที่เก็บไฟล์ CSV
 
     # ตรวจสอบว่ามีไฟล์ CSV อยู่หรือไม่
     if os.path.exists(csv_file_path):
+        # อ่านข้อมูลจากไฟล์ CSV ที่มีอยู่
         existing_df = pd.read_csv(csv_file_path)
     else:
+        # ถ้าไม่มี ให้สร้าง DataFrame ใหม่
         existing_df = pd.DataFrame(columns=['name', 'count'])
 
     # นับชื่อและอัปเดต DataFrame
@@ -63,20 +65,15 @@ def save_to_csv(cropped_names):
         if name in existing_df['name'].values:
             existing_df.loc[existing_df['name'] == name, 'count'] += 1
         else:
+            # แทนที่การใช้ append ด้วย pd.concat
             new_row = pd.DataFrame({'name': [name], 'count': [1]})
             existing_df = pd.concat([existing_df, new_row], ignore_index=True)
 
-    # ตรวจสอบว่า DataFrame ถูกต้อง
-    st.write("DataFrame ก่อนบันทึก:", existing_df.head())
-
-    # บันทึก DataFrame ลงในไฟล์ CSV
-    existing_df.to_csv(csv_file_path, index=False, encoding='utf-8')
-    st.write("บันทึกลง CSV เรียบร้อย")
-
     # บันทึก DataFrame ลงในไฟล์ CSV
     existing_df.to_csv(csv_file_path, index=False, encoding='utf-8')
 
-def count_names_in_csv(csv_file_path='backend\names.csv'):  # แก้ไขเป็นชื่อไฟล์ที่ถูกต้อง
+
+def count_names_in_csv(csv_file_path='backend/names.csv'):  # แก้ไขเป็นชื่อไฟล์ที่ถูกต้อง
     if os.path.isfile(csv_file_path):
         df = pd.read_csv(csv_file_path, encoding='utf-8')
         return df if not df.empty else pd.DataFrame(columns=['name', 'count'])
