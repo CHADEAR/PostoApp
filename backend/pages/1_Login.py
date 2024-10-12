@@ -39,6 +39,9 @@ def change_colors():
             .st-emotion-cache-1dp5vir{
                 background-color: #ff5f5f;  /* สีพื้นหลัง */
             }
+            .st-emotion-cache-12fmjuu{
+                background-color: #ff5f5f;
+            }
             .stText {
                 color: #333366;  /* สีของตัวอักษร */
             }
