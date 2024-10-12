@@ -19,6 +19,9 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 CSV_FILE = 'backend/names.csv'
 
+user_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/user.png?alt=media&token=f22ea9fc-4de4-4ed9-801b-4a2875312905"
+bot_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/robot.png?alt=media&token=99e37f4c-dbef-4d07-86a5-75e70585ac54"
+
 def chat():
     check_login()
 
@@ -60,6 +63,9 @@ def chat():
         .st-emotion-cache-12fmjuu{
             background-color: #FF5F5F;
             z-index: 1;
+        }
+        .chat.user{
+            
         }
         </style>
         """,
@@ -114,8 +120,8 @@ def chat():
 
     with chat_placeholder.container():
         for i in range(len(st.session_state['generated'])):
-            message(st.session_state['past'][i], is_user=True, key=f"user_{i}")
-            message(st.session_state['generated'][i], key=f"bot_{i}")
+            message(st.session_state['past'][i], is_user=True, avatar_style=user_avatar, key=f"user_{i}")
+            message(st.session_state['generated'][i], key=f"bot_{i}", avatar_style=bot_avatar)
 
     # ช่องป้อนข้อความ
     st.text_input("ถามคำถามของคุณที่นี่:", on_change=on_input_change, key="user_input")
