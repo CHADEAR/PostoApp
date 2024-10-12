@@ -36,7 +36,7 @@ def chat():
         .stTextInput {
             position: fixed;
             bottom: 0;
-            width: 80%;
+            width: 85%;
             margin-bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
