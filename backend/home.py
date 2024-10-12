@@ -6,7 +6,7 @@ if "current_page" not in st.session_state:
 
 # ตรวจสอบว่าเป็นหน้า login หรือไม่
 if st.session_state.current_page == "login":
-    ShowSidebarNavigation = false
+    ShowSidebarNavigation = False
     
 def main():
     # ตรวจสอบสถานะของ current_page และเรียก switch_page ตามหน้า
