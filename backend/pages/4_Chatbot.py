@@ -21,13 +21,15 @@ CSV_FILE = 'backend/names.csv'  # แก้ไขให้ตรงตามพ�
 
 def chat():
     check_login()
-    st.html(
-    "<div style='width:70%; background-color:#FF5F5F;' ><span>POST</span></div>"
-)
      # ใช้ CSS สำหรับ fix text input ให้ติดอยู่ที่ด้านล่างของหน้าจอ
     st.markdown(
         """
         <style>
+        .body{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
         .stTextInput {
             position: fixed;
             bottom: 0;
@@ -40,7 +42,9 @@ def chat():
         """,
         unsafe_allow_html=True
     )
-    
+    st.html(
+    "<div style='width:100%; background-color:#FF5F5F; height:10vh;'><span>POST</span></div>"
+)
     # ฟังก์ชันสำหรับการตรวจสอบคำถามใน CSV
     def check_question_in_csv(question):
         try:
