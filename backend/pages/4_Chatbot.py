@@ -6,8 +6,8 @@ import os
 def check_login():
     if "login_status" not in st.session_state or not st.session_state.login_status:
         st.warning("กรุณา Login ก่อนเข้าหน้าอื่น")
-        st.session_state.current_page = "Login"  # เปลี่ยนไปยังหน้า Home
-        st.switch_page("pages/1_Login.py")  # สลับไปยังหน้า Home
+        st.session_state.current_page = "Login"
+        st.switch_page("pages/1_Login.py")
 
 # กำหนดค่าเริ่มต้นสำหรับ messages
 st.session_state.setdefault('past', [])
@@ -17,11 +17,12 @@ st.session_state.setdefault('generated', [])
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-CSV_FILE = 'backend/names.csv'  # แก้ไขให้ตรงตามพาธไฟล์
+CSV_FILE = 'backend/names.csv'
 
 def chat():
     check_login()
-     # ใช้ CSS สำหรับ fix text input ให้ติดอยู่ที่ด้านล่างของหน้าจอ
+
+    # ใช้ CSS สำหรับ fix text input ให้ติดอยู่ที่ด้านล่างของหน้าจอ
     st.markdown(
         """
         <style>
@@ -44,19 +45,20 @@ def chat():
         """,
         unsafe_allow_html=True
     )
-st.markdown(
-    """
-    <nav style="width:100%; background-color:#FF5F5F; height:10vh; display: flex; align-items: center; justify-content: center;">
-        <span style="color: white; font-size: 24px;">POST</span>
-    </nav>
-    """,
-    unsafe_allow_html=True
-)
+    
+    st.markdown(
+        """
+        <nav style="width:100%; background-color:#FF5F5F; height:10vh; display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-size: 24px;">POST</span>
+        </nav>
+        """,
+        unsafe_allow_html=True
+    )
 
     # ฟังก์ชันสำหรับการตรวจสอบคำถามใน CSV
     def check_question_in_csv(question):
         try:
-            df = pd.read_csv(CSV_FILE)  # อ่านไฟล์ CSV
+            df = pd.read_csv(CSV_FILE)
             return question in df['name'].values
         except Exception as e:
             st.error(f"เกิดข้อผิดพลาดในการอ่านไฟล์ CSV: {e}")
@@ -74,29 +76,27 @@ st.markdown(
     # ฟังก์ชันสำหรับการส่งข้อความ
     def on_input_change():
         user_input = st.session_state.user_input
-        if user_input:  # ตรวจสอบว่ามีข้อมูล
+        if user_input:
             st.session_state.past.append(user_input)
-            # เรียกใช้ฟังก์ชันเพื่อจัดการคำถามและรับคำตอบ
             answer = handle_chat(user_input)
             st.session_state.generated.append(answer)
-            st.session_state.user_input = ""  # ล้างช่องข้อความหลังจากส่ง
-    
+            st.session_state.user_input = ""
+
     # ตรวจสอบการตั้งค่า session_state
     if 'past' not in st.session_state:
         st.session_state['past'] = []
-    
+
     if 'generated' not in st.session_state:
         st.session_state['generated'] = []
-    
+
     # แสดงข้อความใน container
     chat_placeholder = st.empty()
-    
-    # ส่วนที่แสดงข้อความ
+
     with chat_placeholder.container():
         for i in range(len(st.session_state['generated'])):
             message(st.session_state['past'][i], is_user=True, key=f"user_{i}")
-            message(st.session_state['generated'][i], key=f"bot_{i}", )
-    
+            message(st.session_state['generated'][i], key=f"bot_{i}")
+
     # ช่องป้อนข้อความ
     st.text_input("ถามคำถามของคุณที่นี่:", on_change=on_input_change, key="user_input")
 
