@@ -123,5 +123,8 @@ def chat():
             message(st.session_state['past'][i], is_user=True, key=f"user_{i}")
             message(st.session_state['generated'][i], key=f"bot_{i}", )
 
+     # ช่องป้อนข้อความ
+     st.text_input("ถามคำถามของคุณที่นี่:", on_change=on_input_change, key="user_input")
+
 if __name__ == "__main__":
     chat()
