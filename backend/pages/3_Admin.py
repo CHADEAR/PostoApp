@@ -84,7 +84,6 @@ def Admin():
         if detected_names:
             cropped_names = crop_and_read_names(image_path, boxes)
             save_to_csv(cropped_names)
-            st.write("บันทึกชื่อเรียบร้อยแล้วลงใน CSV: ", cropped_names)  # เพิ่มข้อความดีบัก
     
                 # แสดงผลลัพธ์
             st.write("Detected Names: ", ", ".join(detected_names))
