@@ -52,7 +52,6 @@ def chat():
             align-items: center;
             justify-content: center;
             z-index: 100;
-            margin-top:10vh;
         }
         .navbar span {
             color: white;
@@ -60,7 +59,7 @@ def chat():
         }
         .st-emotion-cache-12fmjuu{
             background-color: #FF5F5F;
-             z-index: 1;
+            z-index: 1;
         }
         </style>
         """,
