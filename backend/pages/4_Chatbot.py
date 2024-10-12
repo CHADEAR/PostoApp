@@ -60,6 +60,7 @@ def chat():
         }
         .stAppHeader st-emotion-cache-12fmjuu{
             z-index: 1;
+            background-color: #FF5F5F;
         }
         </style>
         """,
