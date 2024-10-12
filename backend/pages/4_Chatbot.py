@@ -41,6 +41,22 @@ def chat():
             left: 50%;
             transform: translateX(-50%);
         }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #FF5F5F;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .navbar span {
+            color: white;
+            font-size: 24px;
+        }
         </style>
         """,
         unsafe_allow_html=True
