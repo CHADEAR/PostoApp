@@ -60,6 +60,7 @@ def chat():
         }
         .st-emotion-cache-12fmjuu{
             background-color: #FF5F5F;
+             z-index: 1;
         }
         </style>
         """,
