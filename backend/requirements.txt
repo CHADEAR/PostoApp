@@ -1,0 +1,10 @@
+Flask
+easyocr
+Pillow
+pandas
+roboflow
+streamlit-option-menu
+streamlit
+streamlit-chat
+opencv-python-headless
+pyrebase4
