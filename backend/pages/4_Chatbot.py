@@ -51,16 +51,16 @@ def chat():
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1;
+            z-index: 100;
             margin-top:10vh;
         }
         .navbar span {
             color: white;
             font-size: 24px;
         }
-        # .stAppHeader st-emotion-cache-12fmjuu{
-        #     background-color: #FF5F5F;
-        # }
+        .stAppHeader st-emotion-cache-12fmjuu{
+            z-index: 1;
+        }
         </style>
         """,
         unsafe_allow_html=True
