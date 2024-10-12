@@ -44,9 +44,15 @@ def chat():
         """,
         unsafe_allow_html=True
     )
-    st.html(
-    "<div style='width:100%; background-color:#FF5F5F; height:10vh;'><span>POST</span></div>"
+st.markdown(
+    """
+    <nav style="width:100%; background-color:#FF5F5F; height:10vh; display: flex; align-items: center; justify-content: center;">
+        <span style="color: white; font-size: 24px;">POST</span>
+    </nav>
+    """,
+    unsafe_allow_html=True
 )
+
     # ฟังก์ชันสำหรับการตรวจสอบคำถามใน CSV
     def check_question_in_csv(question):
         try:
