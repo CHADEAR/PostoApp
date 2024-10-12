@@ -61,14 +61,11 @@ def chat():
             background-color: #FF5F5F;
             z-index: 1;
         }
-        .chat.user{
-            
-        }
         .chat.avatar.img {
-        background-image: url('https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/robot.png?alt=media&token=99e37f4c-dbef-4d07-86a5-75e70585ac54');
-        background-size: cover; /* เพื่อให้ภาพเต็มพื้นที่ */
-        background-position: center; /* จัดภาพให้อยู่กลาง */
-    }
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/robot.png?alt=media&token=99e37f4c-dbef-4d07-86a5-75e70585ac54');
+            background-size: cover; /* เพื่อให้ภาพเต็มพื้นที่ */
+            background-position: center; /* จัดภาพให้อยู่กลาง */
+        }
         </style>
         """,
         unsafe_allow_html=True
