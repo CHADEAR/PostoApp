@@ -1,7 +1,0 @@
-Flask
-easyocr
-Pillow
-pandas
-roboflow
-opencv-python-headless
-
