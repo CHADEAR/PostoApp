@@ -22,7 +22,7 @@ CSV_FILE = 'backend/names.csv'  # แก้ไขให้ตรงตามพ�
 def chat():
     check_login()
     st.html(
-    "<div style='width:70%;','background-color:#FF5F5F;' ><span>POST</span></div>"
+    "<div style='width:70%; background-color:#FF5F5F;' ><span>POST</span></div>"
 )
      # ใช้ CSS สำหรับ fix text input ให้ติดอยู่ที่ด้านล่างของหน้าจอ
     st.markdown(
