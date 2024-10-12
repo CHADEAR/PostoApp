@@ -58,8 +58,7 @@ def chat():
             color: white;
             font-size: 24px;
         }
-        .st-emotion-cache-12fmjuu ezrtsby2{
-            z-index: 1;
+        .st-emotion-cache-12fmjuu{
             background-color: #FF5F5F;
         }
         </style>
