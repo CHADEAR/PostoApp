@@ -1,6 +1,64 @@
 import streamlit as st
 import pyrebase
 
+def change_colors():
+    style = """
+        <style>
+            #login {
+                color: #333366;  /* เปลี่ยนสีของคำว่า Login */
+            }
+            input[type="email"], input[type="password"] {
+                color: #333366;  /* สีข้อความในฟิลด์ input */
+            }
+            .st-emotion-cache-uef7qa{
+                color: #333366;  /* สีข้อความในฟิลด์ input */
+            }
+            /* เปลี่ยนสีพื้นหลังของฟิลด์ input */
+            .stTextInput > div > div > input {
+                background-color: #e8f0fe;  /* สีพื้นหลังของฟิลด์ input */
+            }
+            /* เปลี่ยนสีของ label */
+            label {
+                color: #333366;  /* สีของ label */
+                font-weight: bold;  /* หนักตัวอักษร */
+            }
+            .st-ae, .st-bd, .st-be, .st-bf, .st-bg, .st-bh,
+            .st-bi, .st-bj, .st-bk, .st-bl, .st-bm, .st-ah,
+            .st-bn, .st-bo, .st-bp, .st-bq, .st-br, .st-bs,
+            .st-bt, .st-bu, .st-ax, .st-ay, .st-az, .st-bv,
+            .st-b1, .st-b2, .st-bc, .st-bw, .st-bx, .st-by {
+                /* เปลี่ยนแปลงการสไตล์ตามที่คุณต้องการ */
+                color: #333366;  /* เปลี่ยนสีข้อความ */
+            }
+            .st-emotion-cache-bm2z3a {
+                background-color: #f0f0f0;  /* สีพื้นหลัง */
+            }
+            .st-emotion-cache-h4xjwg{
+                background-color: #ff5f5f;  /* สีพื้นหลัง */
+            }
+            st-emotion-cache-1dp5vir{
+                background-color: #ff5f5f;  /* สีพื้นหลัง */
+            }
+            .stText {
+                color: #333366;  /* สีของตัวอักษร */
+            }
+            .stButton>button {
+                background-color: #f9e75e;  /*  */
+                color: #333366;  /* สีของตัวอักษรในปุ่ม */
+            }
+            .stButton>button:hover {
+                background-color: #f9e75e;  /* สีของปุ่มเมื่อชี้เมาส์ */
+            }
+            footer {
+                visibility: hidden;  /* ซ่อนฟุตเตอร์ */
+            }
+            #MainMenu {
+                visibility: hidden;  /* ซ่อนเมนูหลัก */
+            }
+        </style>
+    """
+    st.markdown(style, unsafe_allow_html=True)
+
 
 # Firebase config
 firebaseConfig = {
@@ -22,6 +80,7 @@ allowed_email = "admin@adminbydorm.com"
 allowed_password = "admin1234"
 
 def login():
+    change_colors()
     st.title("Login")
 
     if "login_status" not in st.session_state:
@@ -50,6 +109,7 @@ def login():
         if email == allowed_email and password == allowed_password:
             try:
                 user = auth.sign_in_with_email_and_password(email, password)
+                st.session_state.email = email  # เก็บอีเมลลงใน session state
                 st.session_state.login_status = "success"
             except:
                 st.error("Login ไม่สำเร็จ กรุณาตรวจสอบข้อมูลอีกครั้ง.")
@@ -65,4 +125,3 @@ def login():
     
 if __name__ == "__main__":
     login()
-
