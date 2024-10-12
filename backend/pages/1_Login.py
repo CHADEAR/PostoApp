@@ -15,7 +15,7 @@ def change_colors():
             }
             /* เปลี่ยนสีพื้นหลังของฟิลด์ input */
             .stTextInput > div > div > input {
-                background-color: #000000;  /* สีพื้นหลังของฟิลด์ input */
+                background-color: #FCFAEE;  /* สีพื้นหลังของฟิลด์ input */
             }
             /* เปลี่ยนสีของ label */
             label {
