@@ -43,7 +43,7 @@ def chat():
             width:100%;
             height:100%;
         }
-        .st.button{
+        .st-emotion-cache-1vt4y43{
             position: fixed;
             left: 50%;
             transform: translateX(-70%);
