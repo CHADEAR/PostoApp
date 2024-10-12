@@ -19,8 +19,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 CSV_FILE = 'backend/names.csv'
 
-user_avatar = "user.png"
-bot_avatar = "bot.png"
+user_avatar = "/pages/user.png"
+bot_avatar = "/pages/robot.png"
 
 def chat():
     check_login()
