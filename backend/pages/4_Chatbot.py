@@ -118,18 +118,11 @@ def chat():
     # แสดงข้อความใน container
     chat_placeholder = st.empty()
 
+    # ส่วนที่แสดงข้อความ
     with chat_placeholder.container():
         for i in range(len(st.session_state['generated'])):
-            # แสดงข้อความของผู้ใช้พร้อมกับ Avatar
             message(st.session_state['past'][i], is_user=True, key=f"user_{i}")
-            st.image(user_avatar, width=50, use_column_width='auto', caption="User", output_format='PNG')  # แสดง Avatar ของผู้ใช้
-
-            # แสดงข้อความของบอทพร้อมกับ Avatar
-            message(st.session_state['generated'][i], key=f"bot_{i}")
-            st.image(bot_avatar, width=50, use_column_width='auto', caption="Bot", output_format='PNG')  # แสดง Avatar ของบอท
-
-    # ช่องป้อนข้อความ
-    st.text_input("ถามคำถามของคุณที่นี่:", on_change=on_input_change, key="user_input")
+            message(st.session_state['generated'][i], key=f"bot_{i}", )
 
 if __name__ == "__main__":
     chat()
