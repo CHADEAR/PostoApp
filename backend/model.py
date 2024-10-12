@@ -73,7 +73,7 @@ def save_to_csv(cropped_names):
     existing_df.to_csv(csv_file_path, index=False, encoding='utf-8')
 
 
-def count_names_in_csv(csv_file_path='D:\\POSTOAPP2\\backend\\names.csv'):  # แก้ไขเป็นชื่อไฟล์ที่ถูกต้อง
+def count_names_in_csv(csv_file_path='backend\names.csv'):  # แก้ไขเป็นชื่อไฟล์ที่ถูกต้อง
     if os.path.isfile(csv_file_path):
         df = pd.read_csv(csv_file_path, encoding='utf-8')
         return df if not df.empty else pd.DataFrame(columns=['name', 'count'])
