@@ -25,6 +25,22 @@ bot_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.c
 def chat():
     check_login()
     st.title("Chatbot")
+     # ใช้ CSS สำหรับ fix text input ให้ติดอยู่ที่ด้านล่างของหน้าจอ
+    st.markdown(
+        """
+        <style>
+        .stTextInput {
+            position: fixed;
+            bottom: 0;
+            width: 70%;
+            margin-bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
     # ฟังก์ชันสำหรับการตรวจสอบคำถามใน CSV
     def check_question_in_csv(question):
