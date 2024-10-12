@@ -65,11 +65,6 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 CSV_FILE = 'backend/names.csv'  # แก้ไขให้ตรงตามพาธไฟล์
 
-
-# กำหนด URL ของรูปโปรไฟล์
-user_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/user.png?alt=media&token=f22ea9fc-4de4-4ed9-801b-4a2875312905"  # URL ของรูปโปรไฟล์ผู้ใช้
-bot_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/robot.png?alt=media&token=99e37f4c-dbef-4d07-86a5-75e70585ac54"    # URL ของรูปโปรไฟล์ Chatbot
-
 def Admin():
     change_colors()
     check_login()  # ตรวจสอบการล็อกอิน
@@ -89,6 +84,7 @@ def Admin():
         if detected_names:
             cropped_names = crop_and_read_names(image_path, boxes)
             save_to_csv(cropped_names)
+            st.write("บันทึกชื่อเรียบร้อยแล้วลงใน CSV: ", cropped_names)  # เพิ่มข้อความดีบัก
     
                 # แสดงผลลัพธ์
             st.write("Detected Names: ", ", ".join(detected_names))
