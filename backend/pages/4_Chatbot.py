@@ -24,7 +24,9 @@ user_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.
 bot_avatar = "https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/robot.png?alt=media&token=99e37f4c-dbef-4d07-86a5-75e70585ac54"    # URL ของรูปโปรไฟล์ Chatbot
 def chat():
     check_login()
-    st.title("Chatbot")
+    st.html(
+    "<div style='width:70%;' style'background-color:#FF5F5F' ><span>POST</span></div>"
+)
      # ใช้ CSS สำหรับ fix text input ให้ติดอยู่ที่ด้านล่างของหน้าจอ
     st.markdown(
         """
