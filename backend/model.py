@@ -51,7 +51,6 @@ def crop_and_read_names(image_path, bounding_boxes):
 
 def save_to_csv(cropped_names):
     csv_file_path = 'backend/names.csv'
-    st.write(f"ข้อมูลที่จะบันทึก: {cropped_names}")  # เพิ่มการดีบัก
 
     # ตรวจสอบว่ามีไฟล์ CSV อยู่หรือไม่
     if os.path.exists(csv_file_path):
