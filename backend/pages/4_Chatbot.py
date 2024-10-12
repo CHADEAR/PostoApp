@@ -120,8 +120,13 @@ def chat():
 
     with chat_placeholder.container():
         for i in range(len(st.session_state['generated'])):
-            message(st.session_state['past'][i], is_user=True, avatar_style=user_avatar, key=f"user_{i}")
-            message(st.session_state['generated'][i], key=f"bot_{i}", avatar_style=bot_avatar)
+            # แสดงข้อความของผู้ใช้พร้อมกับ Avatar
+            message(st.session_state['past'][i], is_user=True, key=f"user_{i}")
+            st.image(user_avatar, width=50, use_column_width='auto', caption="User", output_format='PNG')  # แสดง Avatar ของผู้ใช้
+
+            # แสดงข้อความของบอทพร้อมกับ Avatar
+            message(st.session_state['generated'][i], key=f"bot_{i}")
+            st.image(bot_avatar, width=50, use_column_width='auto', caption="Bot", output_format='PNG')  # แสดง Avatar ของบอท
 
     # ช่องป้อนข้อความ
     st.text_input("ถามคำถามของคุณที่นี่:", on_change=on_input_change, key="user_input")
