@@ -15,7 +15,7 @@ def change_colors():
             }
             /* เปลี่ยนสีพื้นหลังของฟิลด์ input */
             .stTextInput > div > div > input {
-                background-color: #e8f0fe;  /* สีพื้นหลังของฟิลด์ input */
+                background-color: #000000;  /* สีพื้นหลังของฟิลด์ input */
             }
             /* เปลี่ยนสีของ label */
             label {
@@ -41,6 +41,7 @@ def change_colors():
             }
             .st-emotion-cache-12fmjuu{
                 background-color: #ff5f5f;
+                color: #ffffff;
             }
             .stText {
                 color: #333366;  /* สีของตัวอักษร */
