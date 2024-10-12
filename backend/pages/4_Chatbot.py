@@ -58,7 +58,7 @@ def chat():
             color: white;
             font-size: 24px;
         }
-        .stAppHeader st-emotion-cache-12fmjuu ezrtsby2{
+        .st-emotion-cache-12fmjuu ezrtsby2{
             z-index: 1;
             background-color: #FF5F5F;
         }
