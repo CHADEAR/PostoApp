@@ -61,11 +61,6 @@ def chat():
             background-color: #FF5F5F;
             z-index: 1;
         }
-        .chat.avatar {
-            background-image: url('https://firebasestorage.googleapis.com/v0/b/posto-ai-app.appspot.com/o/robot.png?alt=media&token=99e37f4c-dbef-4d07-86a5-75e70585ac54');
-            background-size: cover; /* เพื่อให้ภาพเต็มพื้นที่ */
-            background-position: center; /* จัดภาพให้อยู่กลาง */
-        }
         </style>
         """,
         unsafe_allow_html=True
@@ -93,10 +88,10 @@ def chat():
     def handle_chat(question):
         if question:
             if check_question_in_csv(question):
-                return f"✅ คำถาม '{question}' ถูกพบใน CSV."
+                return f"✅ พัสดุของ '{question}' มาถึงแล้วครับ"
             else:
-                return f"❌ คำถาม '{question}' ไม่ถูกพบใน CSV."
-        return "🚫 กรุณาถามคำถามที่ถูกต้อง."
+                return f"❌ พัสดุของ '{question}' ยังไม่มาถึงครับ"
+        return "🚫 กรุณาใส่ชื่อผู้รับพัสดุ"
     
     # ฟังก์ชันสำหรับการส่งข้อความ
     def on_input_change():
@@ -124,7 +119,7 @@ def chat():
             message(st.session_state['generated'][i], key=f"bot_{i}")
 
     # ช่องป้อนข้อความ
-    st.text_input("ถามคำถามของคุณที่นี่:", on_change=on_input_change, key="user_input")
+    st.text_input("ใส่ชื่อผู้รับพัสดุ :", on_change=on_input_change, key="user_input")
 
 if __name__ == "__main__":
     chat()
