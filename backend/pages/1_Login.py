@@ -59,6 +59,9 @@ def change_colors():
             #MainMenu {
                 visibility: hidden;  /* ซ่อนเมนูหลัก */
             }
+            .st-af st-c0 st-bk st-bl st-bi st-bj st-c1 st-c2 st-c3 st-bm st-bc{
+                background-color: #333366; 
+            }
         </style>
     """
     st.markdown(style, unsafe_allow_html=True)
