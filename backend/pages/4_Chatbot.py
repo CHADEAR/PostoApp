@@ -69,7 +69,7 @@ def chat():
     st.markdown(
         """
         <div class="navbar">
-            <span>POST</span>
+            <span>POSTO</span>
         </div>
         """,
         unsafe_allow_html=True
