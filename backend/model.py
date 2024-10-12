@@ -50,7 +50,7 @@ def crop_and_read_names(image_path, bounding_boxes):
     return cropped_names
 
 def save_to_csv(cropped_names):
-    csv_file_path = 'D:\\POSTOAPP2\\backend\\names.csv'  # ระบุที่เก็บไฟล์ CSV
+    csv_file_path = '\backend\names.csv'  # ระบุที่เก็บไฟล์ CSV
 
     # ตรวจสอบว่ามีไฟล์ CSV อยู่หรือไม่
     if os.path.exists(csv_file_path):
