@@ -45,7 +45,7 @@ def chat():
         }
         .st-emotion-cache-1vt4y43{
             position: fixed;
-            left: 80%;
+            left: 100%;
         }
         .stTextInput {
             position: fixed;
