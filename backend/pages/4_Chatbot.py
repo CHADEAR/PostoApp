@@ -13,6 +13,16 @@ def check_login():
 st.session_state.setdefault('past', [])
 st.session_state.setdefault('generated', [])
 
+def logout():
+    if "login_status" in st.session_state:
+        st.session_state.login_status = False
+    if "email" in st.session_state:
+        st.session_state.email = None  # ลบอีเมลออกจาก session
+    st.success("Logout สำเร็จ!")
+    st.session_state.current_page = "login"  # เปลี่ยนไปที่หน้า Login
+    st.switch_page("pages/1_Login.py")  # สลับไปยังหน้า Home
+    st.experimental_rerun()  # รีเฟรชหน้า
+
 # สร้างโฟลเดอร์สำหรับอัปโหลดถ้าไม่มี
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -120,6 +130,9 @@ def chat():
 
     # ช่องป้อนข้อความ
     st.text_input("ใส่ชื่อผู้รับพัสดุ :", on_change=on_input_change, key="user_input")
+
+if st.button("Logout"):
+        logout()  # เรียกฟังก์ชัน logout
 
 if __name__ == "__main__":
     chat()
