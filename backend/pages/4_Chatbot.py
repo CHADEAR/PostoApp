@@ -43,6 +43,11 @@ def chat():
             width:100%;
             height:100%;
         }
+        .st.button{
+            position: fixed;
+            left: 50%;
+            transform: translateX(-70%);
+        }
         .stTextInput {
             position: fixed;
             bottom: 0;
