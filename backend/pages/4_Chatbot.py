@@ -84,7 +84,7 @@ def chat():
             top: 0;
             right: 0;
             margin-top:7px;
-            margin-right:30px;
+            margin-right:50px;
             width: 100px; /* ขนาดที่เล็กลง */
             height: 50px; /* ขนาดที่เล็กลง */
             z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
