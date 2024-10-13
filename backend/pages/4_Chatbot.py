@@ -77,6 +77,11 @@ def chat():
         }
         .st-emotion-cache-1vt4y43 {
             background-color: #F4EBA4;
+            position: fixed;
+            top: 0;
+            left:75%;
+            margin-top:7px;
+            z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
         }
         @media only screen and (max-width: 768px) {
         .st-emotion-cache-1vt4y43 {
