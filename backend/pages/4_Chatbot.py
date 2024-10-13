@@ -57,8 +57,8 @@ def chat():
         }
         .navbar {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 10;
+            left: 5;
             width: 100%;
             background-color: #FF5F5F;
             height: 10vh;
