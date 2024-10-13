@@ -82,10 +82,10 @@ def chat():
         .st-emotion-cache-1vt4y43 {
             position: fixed;
             top: 0;
-            left:80%;
+            left:75%;
             margin-top:7px;
-            width: 80px; /* ขนาดที่เล็กลง */
-            height: 50px; /* ขนาดที่เล็กลง */
+            width: 70px; /* ขนาดที่เล็กลง */
+            height: 40px; /* ขนาดที่เล็กลง */
             z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
         }
 }
