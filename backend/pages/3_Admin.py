@@ -34,7 +34,13 @@ def change_colors():
             .stButton>button:hover {
                 background-color: #f9e75e;  /* สีของปุ่มเมื่อชี้เมาส์ */
             }
-        
+            .st-emotion-cache-12fmjuu{
+                background-color: #FF5F5F;
+                color : white;
+            }
+            .st-emotion-cache-1vt4y43 ef3psqc16{
+                background-color: #C4D7FF;
+            }
         </style>
     """
     st.markdown(style, unsafe_allow_html=True)
