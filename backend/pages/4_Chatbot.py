@@ -57,8 +57,8 @@ def chat():
         }
         .navbar {
             position: fixed;
-            top: 10;
-            left: 5;
+            top: 0;
+            left: 0;
             width: 100%;
             background-color: #FF5F5F;
             height: 10vh;
@@ -81,8 +81,8 @@ def chat():
         @media only screen and (max-width: 768px) {
         .st-emotion-cache-1vt4y43 {
             position: fixed;
-            top: 0;
-            right: 0;
+            top: 5;
+            right: 5;
             width: 50px; /* ขนาดที่เล็กลง */
             height: 50px; /* ขนาดที่เล็กลง */
             z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
