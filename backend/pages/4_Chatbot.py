@@ -75,6 +75,10 @@ def chat():
             background-color: #FF5F5F;
             z-index: 1;
         }
+        .st-emotion-cache-1vt4y43 {
+            background-color: #F4EBA4;
+        }
+
         </style>
         """,
         unsafe_allow_html=True
