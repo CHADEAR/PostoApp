@@ -78,6 +78,16 @@ def chat():
         .st-emotion-cache-1vt4y43 {
             background-color: #F4EBA4;
         }
+        @media only screen and (max-width: 768px) {
+        .st-emotion-cache-1vt4y43 {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50px; /* ขนาดที่เล็กลง */
+            height: 50px; /* ขนาดที่เล็กลง */
+            z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
+        }
+}
 
         </style>
         """,
