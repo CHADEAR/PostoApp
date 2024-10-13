@@ -15,7 +15,7 @@ def change_colors():
             .st-emotion-cache-h4xjwg{
                 background-color: #ff5f5f;  /* สีheader */
             }
-            st-emotion-cache-1dp5vir{
+            .st-emotion-cache-1dp5vir{
                 background-color: #ff5f5f;  /* header */
             }
             .stText {
@@ -24,7 +24,7 @@ def change_colors():
             .st-emotion-cache-1erivf3{
                 background-color: #333366;  /* สี upload */
             }
-            st-emotion-cache-15hul6a{
+            .st-emotion-cache-15hul6a{
                 background-color: #333366;  /* สี upload */
             }
             .stButton>button {
@@ -38,7 +38,7 @@ def change_colors():
                 background-color: #FF5F5F;
                 color : white;
             }
-            .st-emotion-cache-1vt4y43 ef3psqc16{
+            .button.st-emotion-cache-1vt4y43 ef3psqc16{
                 background-color: #C4D7FF;
             }
         </style>
