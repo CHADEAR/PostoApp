@@ -38,7 +38,7 @@ def change_colors():
                 background-color: #FF5F5F;
                 color : white;
             }
-            .button.st-emotion-cache-1vt4y43 ef3psqc16{
+            .st-emotion-cache-1vt4y43{
                 background-color: #C4D7FF;
             }
         </style>
