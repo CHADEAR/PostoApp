@@ -42,7 +42,7 @@ def change_colors():
             .st-emotion-cache-uef7qa{
                 color: #333366;  /* สีข้อความในฟิลด์ input */
             }
-            st-emotion-cache-1dp5vir{
+            .st-emotion-cache-12fmjuu {
                 background-color: #ff5f5f;  /* สีพื้นหลัง */
             }
             .stText {
