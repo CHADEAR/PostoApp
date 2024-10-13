@@ -83,9 +83,9 @@ def chat():
             position: fixed;
             top: 0;
             left:75%;
-            margin-top:7px;
+            margin-top:15px;
             width: 70px; /* ขนาดที่เล็กลง */
-            height: 40px; /* ขนาดที่เล็กลง */
+            height: 47px; /* ขนาดที่เล็กลง */
             z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
         }
 }
