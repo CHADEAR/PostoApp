@@ -51,7 +51,7 @@ def crop_and_read_names(image_path, bounding_boxes):
     return cropped_names
 
 def save_to_csv(cropped_names):
-    csv_file_path = 'names.csv'
+    csv_file_path = 'backend/names.csv'
 
     try:
         if os.path.exists(csv_file_path):
@@ -72,7 +72,7 @@ def save_to_csv(cropped_names):
         print(f"เกิดข้อผิดพลาดในการบันทึกไฟล์ CSV: {e}")
 
 
-def count_names_in_csv(csv_file_path='names.csv'):  # แก้ไขเป็นชื่อไฟล์ที่ถูกต้อง
+def count_names_in_csv(csv_file_path='backend/names.csv'):  # แก้ไขเป็นชื่อไฟล์ที่ถูกต้อง
     if os.path.isfile(csv_file_path):
         df = pd.read_csv(csv_file_path, encoding='utf-8')
         return df if not df.empty else pd.DataFrame(columns=['name', 'count'])
