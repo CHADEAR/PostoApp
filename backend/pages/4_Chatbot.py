@@ -113,18 +113,21 @@ def chat():
     def check_question_in_csv(question):
         try:
             df = pd.read_csv(CSV_FILE)
-            return question in df['name'].values
+            # เปรียบเทียบโดยลบช่องว่างและเปลี่ยนเป็นตัวพิมพ์เล็ก
+            cleaned_question = question.strip().lower()
+            return cleaned_question in df['name'].str.strip().str.lower().values
         except Exception as e:
             st.error(f"เกิดข้อผิดพลาดในการอ่านไฟล์ CSV: {e}")
             return False
-    
-    # ฟังก์ชันที่จัดการคำถาม
+
+# ฟังก์ชันที่จัดการคำถาม
     def handle_chat(question):
         if question:
-            if check_question_in_csv(question):
-                return f"✅ พัสดุของ {question} มาถึงแล้วครับ"
+            cleaned_question = question.strip()
+            if check_question_in_csv(cleaned_question):
+                return f"✅ พัสดุของ {cleaned_question} มาถึงแล้วครับ"
             else:
-                return f"❌ พัสดุของ {question} ยังไม่มาถึงครับ"
+                return f"❌ พัสดุของ {cleaned_question} ยังไม่มาถึงครับ"
         return "🚫 กรุณาใส่ชื่อผู้รับพัสดุ"
     
     # ฟังก์ชันสำหรับการส่งข้อความ
@@ -135,7 +138,6 @@ def chat():
             answer = handle_chat(user_input)
             st.session_state.generated.append(answer)
             st.session_state.user_input = ""
-
     # ตรวจสอบการตั้งค่า session_state
     if 'past' not in st.session_state:
         st.session_state['past'] = []
