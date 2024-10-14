@@ -9,9 +9,9 @@ from roboflow import Roboflow
 from PIL import Image
 
 # Initialize Roboflow client
-rf = Roboflow(api_key="RWx4xaA5IRx0EtIUTBS9")
-project = rf.workspace().project("parcel-name-detection")
-model = project.version(3).model
+rf = Roboflow(api_key="NNVM2evYZAe2wMrp9xGl")
+project = rf.workspace("farafrang").project("parcel-receiver-name-detection-mdp3r")
+model = project.version(2).model
 
 # Create EasyOCR reader
 reader = easyocr.Reader(['en', 'th'])  # Supports English and Thai
