@@ -41,13 +41,6 @@ def change_colors():
             .st-emotion-cache-1vt4y43{
                 background-color: #C4D7FF;
             }
-            .st-emotion-cache-p0pjm{
-                position: fixed;
-                top: 10px;
-                right: 10px;
-                z-index: 1000;
-            }
-           
         </style>
     """
     st.markdown(style, unsafe_allow_html=True)
