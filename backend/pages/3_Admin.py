@@ -43,7 +43,7 @@ def change_colors():
                 color: #333366;
                 padding: 10px 15px;
                 border: none;
-                border-radius: 15px;
+                border-radius: 10px;
                 cursor: pointer;
                 font-size: 16px;
                 z-index: 1000;
