@@ -41,9 +41,9 @@ def change_colors():
                 right: 10px;
                 background-color: #f9e75e;
                 color: #333366;
-                padding: 10px 20px;
+                padding: 10px 15px;
                 border: none;
-                border-radius: 5px;
+                border-radius: 15px;
                 cursor: pointer;
                 font-size: 16px;
                 z-index: 1000;
