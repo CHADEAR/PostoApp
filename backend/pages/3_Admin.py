@@ -37,7 +37,7 @@ def change_colors():
             }
             .logout-button {
                 position: fixed;
-                top: 50px;
+                top: 70px;
                 right: 10px;
                 background-color: #f9e75e;
                 color: #333366;
