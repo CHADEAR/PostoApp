@@ -79,7 +79,7 @@ def chat():
             background-color: #F4EBA4;
             position: fixed;
             top: 0;
-            left:90%;
+            left:20%;
             margin-top:13px;
             z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
         }
@@ -87,7 +87,7 @@ def chat():
         .st-emotion-cache-1vt4y43 {
             position: fixed;
             top: 0;
-            left:25%;
+            left:75%;
             margin-top:7px;
             width: 75px; /* ขนาดที่เล็กลง */
             height: 50px; /* ขนาดที่เล็กลง */
