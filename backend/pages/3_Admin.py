@@ -41,6 +41,12 @@ def change_colors():
             .st-emotion-cache-1vt4y43{
                 background-color: #C4D7FF;
             }
+            .st-emotion-cache-1igbibe ef3psqc19{
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 1000;
+            }
            
         </style>
     """
