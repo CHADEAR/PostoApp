@@ -46,7 +46,7 @@ def chat():
 
         .st-emotion-cache-1igbibe {
             position: fixed;
-            top: 20px;
+            top: 15px;
             right: 10px;
             z-index: 1000; /* ให้องค์ประกอบอยู่ด้านบนสุด */
     }
