@@ -43,6 +43,14 @@ def chat():
             width:100%;
             height:100%;
         }
+
+        .st-emotion-cache-1igbibe {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000; /* ให้องค์ประกอบอยู่ด้านบนสุด */
+    }
+        
         .st-emotion-cache-1vt4y43{
             position: fixed;
             left: 90%;
