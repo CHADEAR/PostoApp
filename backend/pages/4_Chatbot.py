@@ -79,7 +79,7 @@ def chat():
             background-color: #F4EBA4;
             position: fixed;
             top: 0;
-            left:20%;
+            left:90%;
             margin-top:13px;
             z-index: 999; /* ให้องค์ประกอบอยู่ด้านบนสุด */
         }
