@@ -43,8 +43,8 @@ def change_colors():
             }
             .st-emotion-cache-1igbibe {
                 position: fixed;
-                top: 10px;
-                right: 10px;
+                top: 50px;
+                right: 50px;
                 z-index: 1000;
             }
         </style>
