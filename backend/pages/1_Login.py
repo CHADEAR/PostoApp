@@ -82,14 +82,14 @@ def login():
             st.session_state.current_page = "Sign Up"
             st.switch_page("pages/2_SignUp.py")
 
-    if st.button("Login admin"):
-        if email == allowed_email and password == allowed_password:
-            try:
-                user = auth.sign_in_with_email_and_password(email, password)
-                st.session_state.email = email
-                st.session_state.login_status = "success"
-            except:
-                st.error("Login ไม่สำเร็จ กรุณาตรวจสอบข้อมูลอีกครั้ง.")
+    # if st.button("Login admin"):
+    #     if email == allowed_email and password == allowed_password:
+    #         try:
+    #             user = auth.sign_in_with_email_and_password(email, password)
+    #             st.session_state.email = email
+    #             st.session_state.login_status = "success"
+    #         except:
+    #             st.error("Login ไม่สำเร็จ กรุณาตรวจสอบข้อมูลอีกครั้ง.")
         else:
             st.error("Email หรือ Password ไม่ถูกต้อง.")
 
