@@ -76,6 +76,7 @@ def login():
     if st.button("Login"):
         try:
             user = auth.sign_in_with_email_and_password(email, password)
+            st.session_state.email = email
             st.session_state.login_status = "success"
         except:
             st.error("Login ไม่สำเร็จ กรุณาตรวจสอบข้อมูลอีกครั้ง.")
