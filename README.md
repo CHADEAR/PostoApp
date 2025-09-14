@@ -17,9 +17,9 @@ Users can also check the status of their arrived parcels through a **chatbot**.
 
 1. Clone or download this repository  
 2. Navigate to the `backend/` folder  
-   ```bash
+   ```
    cd PostoApp-main/backend
-```
+   ```
 3. Install dependencies
 pip install -r requirements.txt
 
