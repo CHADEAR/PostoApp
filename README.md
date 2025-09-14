@@ -23,7 +23,7 @@ Users can also check the status of their arrived parcels through a **chatbot**.
 3. Install dependencies
 pip install -r requirements.txt
 
-4.run project
+4. run project
 python main.py
 
 ---
@@ -31,7 +31,7 @@ python main.py
 ## Try Online (No Installation Needed)
 
 You can also access the deployed app directly here:
-👉 PostoApp Streamlit : https://postoapp.streamlit.app/Login
+👉 [PostoApp](https://postoapp.streamlit.app/Login)
 
 Login credentials:
 
